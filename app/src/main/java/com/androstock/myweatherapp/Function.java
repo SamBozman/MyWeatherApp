@@ -73,7 +73,7 @@ public class Function {
         public AsyncResponse delegate = null;//Call back interface
 
         public placeIdTask(AsyncResponse asyncResponse) {
-            delegate = asyncResponse;//Assigning call back interfacethrough constructor
+            delegate = asyncResponse;//Assigning call back interface through constructor
         }
 
         @Override
