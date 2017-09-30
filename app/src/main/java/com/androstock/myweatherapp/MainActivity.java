@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
         weatherIcon.setTypeface(weatherFont);
 
 
-        Function.placeIdTask asyncTask =new Function.placeIdTask(new Function.AsyncResponse() {
+        Function.AsyncResponse asyncResponse = new Function.AsyncResponse() {
             public void processFinish(String weather_city, String weather_description, String weather_temperature, String weather_humidity, String weather_pressure, String weather_updatedOn, String weather_iconText, String sun_rise) {
 
                 cityField.setText(weather_city);
@@ -49,7 +49,10 @@ public class MainActivity extends AppCompatActivity {
                 weatherIcon.setText(Html.fromHtml(weather_iconText));
 
             }
-        });
+        };
+
+        Function.placeIdTask asyncTask = new Function.placeIdTask(asyncResponse);
+
         //asyncTask.execute("25.180000", "89.530000"); //  asyncTask.execute("Latitude", "Longitude")
         asyncTask.execute("49.104431", "-122.801094"); //  asyncTask.execute("Latitude", "Longitude")
 
