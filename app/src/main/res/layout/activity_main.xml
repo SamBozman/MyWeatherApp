@@ -1,9 +1,10 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#3F51B5"
-    android:padding="20dp">
+    tools:layout_editor_absoluteX="0dp"
+    tools:layout_editor_absoluteY="73dp">
 
     <TextView
         android:id="@+id/city_field"
@@ -11,8 +12,9 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:textColor="#FFFFFF"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
+        android:text="ciity"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#FFFFFF" />
 
     <TextView
         android:id="@+id/updated_field"
@@ -20,8 +22,9 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/city_field"
         android:layout_centerHorizontal="true"
-        android:textColor="#FFFFFF"
+        android:text="date"
         android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#FFFFFF"
         android:textSize="13sp" />
 
     <TextView
@@ -30,6 +33,7 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
+        android:text="icon"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:textColor="#FFFFFF"
         android:textSize="36sp" />
@@ -40,9 +44,11 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:textColor="#FFFFFF"
+        android:text="temp"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:textSize="50sp" />
+        android:textColor="#FFFFFF"
+        android:textSize="24sp" />
+
 
     <TextView
         android:id="@+id/details_field"
@@ -50,26 +56,28 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/weather_icon"
         android:layout_centerHorizontal="true"
-        android:textColor="#FFFFFF"
+        android:text="description"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        />
+        android:textColor="#FFFFFF" />
+
     <TextView
         android:id="@+id/humidity_field"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/details_field"
         android:layout_centerHorizontal="true"
-        android:textColor="#FFFFFF"
+        android:text="humidity"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        />
+        android:textColor="#FFFFFF" />
+
     <TextView
         android:id="@+id/pressure_field"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/humidity_field"
         android:layout_centerHorizontal="true"
-        android:textColor="#FFFFFF"
+        android:text="pressure"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        />
+        android:textColor="#FFFFFF" />
 
-</RelativeLayout>
+</android.support.constraint.ConstraintLayout>

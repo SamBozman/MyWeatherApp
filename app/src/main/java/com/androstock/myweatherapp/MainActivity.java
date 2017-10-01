@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
 
         Function.AsyncResponse asyncResponse = new Function.AsyncResponse() {
             public void processFinish(String weather_city, String weather_description, String weather_temperature, String weather_humidity, String weather_pressure, String weather_updatedOn, String weather_iconText, String sun_rise) {
-
+                weather_description = weather_description.substring(0, 1).toUpperCase() + weather_description.substring(1).toLowerCase();
                 cityField.setText(weather_city);
                 updatedField.setText(weather_updatedOn);
                 detailsField.setText(weather_description);
